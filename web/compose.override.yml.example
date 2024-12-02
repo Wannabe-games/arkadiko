@@ -7,7 +7,7 @@ services:
   web:
     command: yarn dev
     networks:
-      - trefik
+      - traefik
     labels:
       traefik.enable: true
       traefik.docker.network: traefik
@@ -15,4 +15,3 @@ services:
       traefik.http.routers.arkadiko-web.tls.certresolver: letsencrypt
       traefik.http.routers.arkadiko-web.entrypoints: websecure
       traefik.http.routers.arkadiko-web.rule: Host(`arkadiko.greenso.group`)
-

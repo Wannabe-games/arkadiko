@@ -12,7 +12,7 @@ yarn_install: build-image
 
 run_dev: .env yarn_install
 	@echo "Running development server..."
-	docker compose up
+	docker compose up -d
 
 # if .env file is not present, copy the example file
 .env:
