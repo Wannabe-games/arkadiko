@@ -1,6 +1,6 @@
 BACKEND_URL = http://api:3000
 
-PHONY: build-image yarn_install run_dev stop purge
+PHONY: build-image yarn_install run_dev stop purge logs
 
 build-image:
 	@echo "Building image..."
@@ -21,6 +21,10 @@ run_dev: .env yarn_install
 stop:
 	@echo "Stopping development server..."
 	docker compose down
+
+logs:
+  @echo "Showing logs..."
+  docker compose logs -f
 
 purge:
 	@echo "Purging..."
