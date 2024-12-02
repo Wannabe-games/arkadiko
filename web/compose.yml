@@ -1,0 +1,17 @@
+networks:
+  api:
+    external: true
+    name: arkadiko-api
+
+services:
+  web:
+    container_name: arkadiko-web
+    build: .
+    image: arkadiko-web
+    command: yarn dev
+    expose:
+      - 9000
+    volumes:
+      - .:/app
+    networks:
+      - api
