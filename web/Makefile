@@ -23,8 +23,8 @@ stop:
 	docker compose down
 
 logs:
-  @echo "Showing logs..."
-  docker compose logs -f
+	@echo "Showing logs..."
+	docker compose logs -f
 
 purge:
 	@echo "Purging..."
